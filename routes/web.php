@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Models\Consultation;
+// use App\Models\User;
+// use App\Models\Product;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/product', function () {
+    return view('products.index');
 });
+
+Route::get('show_products', [ProductController::class, 'index']);
 
 Auth::routes();
 
