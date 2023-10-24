@@ -36,6 +36,14 @@ Route::put('/product/{id}/edit',[ProductController::class,'update']);
 Route::delete('/product/{id}',[ProductController::class,('destroy')]);
 
 Route::get('/consultations', [ConsultationController::class, 'index']);
+Route::get('/consultation/', [ConsultationController::class, 'create']);
+Route::get('/consultation', [ConsultationController::class, 'store']);
+
 Route::get('/grooming_services', [GroomingServiceController::class, 'index']);
+Route::get('/grooming_service/', [GroomingServiceController::class, 'create']);
+Route::get('/grooming_service', [GroomingServiceController::class, 'store']);
+
 Route::get('/pet_boardings', [PetBoardingController::class, 'index']);
+Route::get('/pet_boarding/', [PetBoardingController::class, 'create']);
+Route::get('/pet_boarding', [PetBoardingController::class, 'store']);
 

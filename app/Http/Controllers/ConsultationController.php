@@ -30,7 +30,8 @@ class ConsultationController extends Controller
      */
     public function create()
     {
-        //
+        ddd('this is create');
+        // return view('consultations.create');
     }
 
     /**
