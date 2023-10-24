@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PetBoardingModel extends Model
+class Pet extends Model
 {
     use HasFactory;
+
+    protected $table = 'pets';
+
 }

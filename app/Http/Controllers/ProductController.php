@@ -3,24 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\GroomingService;
+use App\Models\Product;
 
 
-class GroomingServiceController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+        // ORM - Object Relational Mapper
     public function index()
     {
-        $grooming_services = GroomingService::all();
+        // SELECT * FROM dbz_db.products; from DB change to Eloquent
+        $products = Product::all();
 
-        ddd('this is index');
-        // return view('grooming_services.index',[
-        //     'grooming_services' => $grooming_services
-        // ]);
+        return view('products.index',[
+            'products' => $products
+        ]);
     }
 
     /**
@@ -30,7 +32,7 @@ class GroomingServiceController extends Controller
      */
     public function create()
     {
-        //
+        ddd('This is a create function');
     }
 
     /**
@@ -52,7 +54,13 @@ class GroomingServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        // select * from products where id = 11;
+        $product = Product::find($id);
+
+        // ddd($product);
+        return view('products.show',[
+            'product' => $product
+        ]);
     }
 
     /**

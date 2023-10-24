@@ -11,7 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    {{-- Icon --}}
+    <link rel="icon" href="{{ asset('public/dbz.ico') }}?v={{ date('YmdHis') }}">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -81,6 +82,15 @@
             @yield('content')
         </main>
     </div>
+
+    <div class="parent">
+        <div class="div1">section </div>
+        <div class="div2"> footer</div>
+        <div class="div3">consult </div>
+        <div class="div4">products </div>
+        <div class="div5">grooming service </div>
+        <div class="div6">pet boardings </div>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

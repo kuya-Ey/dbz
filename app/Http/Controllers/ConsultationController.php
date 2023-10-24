@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\GroomingService;
+use App\Models\Consultation;
 
 
-class GroomingServiceController extends Controller
+class ConsultationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,11 @@ class GroomingServiceController extends Controller
      */
     public function index()
     {
-        $grooming_services = GroomingService::all();
+        $consultations = Consultation::all();
 
         ddd('this is index');
-        // return view('grooming_services.index',[
-        //     'grooming_services' => $grooming_services
+        // return view('consultations.index',[
+        //     'consultations' => $consultations
         // ]);
     }
 
