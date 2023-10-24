@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Models\Consultation;
-// use App\Models\User;
-// use App\Models\Product;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\PetBoardingController;
+use App\Http\Controllers\GroomingServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +17,25 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/product', function () {
-    return view('products.index');
+Auth::routes(['verify' => true]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+
+Route::get('/', function(){
+    return view('auth.login');
 });
 
-Route::get('show_products', [ProductController::class, 'index']);
+// routes for products table
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/product/{id}', [ProductController::class, 'show']);
+Route::get('/product/', [ProductController::class, 'create']);
+Route::get('/product/{id}/edit',[ProductController::class,'edit']);
 
-Auth::routes();
+Route::post('/product',[ProductController::class,'store']);
+Route::put('/product/{id}/edit',[ProductController::class,'update']);
+Route::delete('/product/{id}',[ProductController::class,('destroy')]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/consultations', [ConsultationController::class, 'index']);
+Route::get('/grooming_services', [GroomingServiceController::class, 'index']);
+Route::get('/pet_boardings', [PetBoardingController::class, 'index']);
+
