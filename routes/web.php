@@ -39,3 +39,6 @@ Route::get('/consultations', [ConsultationController::class, 'index']);
 Route::get('/grooming_services', [GroomingServiceController::class, 'index']);
 Route::get('/pet_boardings', [PetBoardingController::class, 'index']);
 
+//vacation
+
+
