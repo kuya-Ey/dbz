@@ -8,13 +8,21 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-<section class="section_form">
-    <form id="consultation-form" class="feed-form" action="post">
-      <input name="fullname" required="" placeholder="Full Name" type="text">
-      <input name="contactnumber" required="" placeholder="Contact number" type="tel" size="20">
-      <input name="petName" required="" placeholder="Pet's Name" type="text">
-      <button class="button_submit">BOOK</button>
-    </form>
-</section>
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
 
 @endsection
