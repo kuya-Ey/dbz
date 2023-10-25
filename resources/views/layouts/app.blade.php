@@ -12,15 +12,18 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     {{-- Icon --}}
-    <link rel="icon" href="{{ asset('public/dbz.ico') }}?v={{ date('YmdHis') }}">
+    <link rel='shortcut icon' href='public/dbz.ico' type='image/x-icon'>
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300&display=swap" rel="stylesheet">
 
     {{-- bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('css/styles.css')}}">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -83,15 +86,7 @@
         </main>
     </div>
 
-    <div class="parent">
-        <div class="div1">section </div>
-        <div class="div2"> footer</div>
-        <div class="div3">consult </div>
-        <div class="div4">products </div>
-        <div class="div5">grooming service </div>
-        <div class="div6">pet boardings </div>
-        </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src={{url('js/app.js')}}></script>
 </body>
 </html>

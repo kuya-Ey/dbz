@@ -30,7 +30,7 @@ class GroomingServiceController extends Controller
      */
     public function create()
     {
-        //
+        ddd('this is a create function');
     }
 
     /**
