@@ -19,11 +19,11 @@ use App\Http\Controllers\GroomingServiceController;
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
-Route::get('/', function(){
-    return view('auth.login');
-});
+// Route::get('/', function(){
+//     return view('auth.login');
+// });
 
 // routes for products table
 Route::get('/products', [ProductController::class, 'index']);
