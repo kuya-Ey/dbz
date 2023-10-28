@@ -32,7 +32,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        ddd('This is a create function');
+      return view('products.create');
     }
 
     /**
@@ -43,7 +43,30 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "name" => "required",
+            "desc" => "required",
+            "quantity" => "required",
+            "price" => "required",
+            "category" => "required",
+            "image" => "required|image|mimes:jpeg,png,jpg ",
+
+
+        ]);
+
+        $path = $request->file("image")->store("images", "public");
+
+
+        Product::create([
+            "name" => $request->name,
+            "description" => $request->desc,
+            "quantity" => $request->quantity,
+            "price" => $request->price,
+            "category" => $request->category,
+            "images"  => $path
+
+        ]);
+
     }
 
     /**
